@@ -1,0 +1,30 @@
+execute_code: True
+
+dataset:
+  data_path: YOUR_DATA_DIR/nlvr2
+  dataset_name: NLVR
+  split: test1
+  batch_size: 1
+
+load_models:
+    maskrcnn: True
+    clip: False
+    glip: True
+    owlvit: False
+    tcl: False
+    gpt3_qa: True
+    gpt3_general: True
+    gpt3_guess: True
+    depth: True
+    blip: True
+    saliency: False
+    xvlm: True
+    codex: True
+    codellama: False
+
+gpt3:  # emmm, davinci is discontinued
+    model: chatgpt
+
+use_cached_codex: True
+cached_codex_path: YOUR_PATH
+fixed_code_file: './prompts/fixed_code/blip2_nlvr.prompt'

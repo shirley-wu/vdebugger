@@ -1,0 +1,35 @@
+dataset:
+    data_path: YOUR_DATA_DIR/refer
+    dataset_name: RefCOCO
+    split_by: unc
+    split: testA
+    version: refcoco+
+    batch_size: 12800
+
+results_dir: ./results/joint/refcocop/
+
+load_models:
+    maskrcnn: False
+    clip: False
+    glip: False
+    owlvit: False
+    tcl: False
+    gpt3_list: False
+    gpt3_qa: False
+    gpt3_guess: False
+    depth: False
+    blip: False
+    saliency: False
+    xvlm: False
+    codellama: True
+
+codex:
+    prompt: ./prompts/benchmarks/joint.py
+    model: codellama
+    codellama_model_name: codellama/CodeLlama-7b-Python-hf
+    max_new_tokens: 256
+    max_batch_size: 12800
+    use_tqdm: True
+    overgenerate: False
+    do_sample: False
+    temperature: 0.

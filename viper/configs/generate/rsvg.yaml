@@ -1,0 +1,33 @@
+dataset:
+    data_path: YOUR_DATA_DIR/rsvg
+    dataset_name: RSVG
+    split: test
+    batch_size: 1000
+
+results_dir: ./results/joint/refcocog/
+
+load_models:
+    maskrcnn: False
+    clip: False
+    glip: False
+    owlvit: False
+    tcl: False
+    gpt3_list: False
+    gpt3_qa: False
+    gpt3_guess: False
+    depth: False
+    blip: False
+    saliency: False
+    xvlm: False
+    codellama: True
+
+codex:
+    prompt: ./prompts/benchmarks/joint.py
+    model: codellama
+    codellama_model_name: codellama/CodeLlama-7b-Python-hf
+    max_new_tokens: 256
+    max_batch_size: 12800
+    overgenerate: False
+    do_sample: False
+    temperature: 0.
+    use_tqdm: True

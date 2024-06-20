@@ -1,0 +1,11 @@
+
+    from torchvision import transforms
+    import torch
+    resize_transform = transforms.Compose([
+        transforms.ToPILImage(),
+        transforms.Resize((500, 500)),
+        transforms.ToTensor()
+    ])
+    image = torch.cat([resize_transform(image_dict['left']), resize_transform(image_dict['right']), ], dim=2)
+    image_patch = ImagePatch(image)
+    return image_patch.simple_query(query)

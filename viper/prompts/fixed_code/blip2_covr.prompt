@@ -1,0 +1,17 @@
+
+    from torchvision import transforms
+    import numpy as np
+    import torch
+    resize_transform = transforms.Compose([
+        transforms.ToPILImage(),
+        transforms.Resize((500, 500)),
+        transforms.ToTensor()
+    ])
+    n = int(np.floor(np.sqrt(len(image_list))))
+    m = len(image_list) // n
+    image_list = [resize_transform(im) for im in image_list]
+    image_list += [torch.ones((3, 500, 500), dtype=image_list[0].dtype) for _ in range(m * n - len(image_list))]
+    image_list = [torch.cat(image_list[i * m : (i + 1) * m], dim=2) for i in range(n)]
+    image_list = torch.cat(image_list, dim=1)
+    image_patch = ImagePatch(image_list)
+    return image_patch.simple_query(query)

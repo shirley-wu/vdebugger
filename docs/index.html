@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VDebugger: Harnessing Execution Feedback for Debugging Visual Programs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VDebugger</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="./static/images/icon.jpg" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span style="vertical-align: middle">VDebugger</span>
+            </h1>
+          <h2 class="subtitle is-4 publication-subtitle">
+            Harnessing Execution Feedback for Debugging Visual Programs
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://shirley-wu.github.io/">Xueqing Wu</a>,</span>
+            <span class="author-block">
+              <a href="https://rafa-zy.github.io/">Zongyu Lin</a>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/songyan-silas-zhao/">Songyan Zhao</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Q5aezXQAAAAJ/">Te-Lin Wu</a>,</span>
+            <span class="author-block">
+              <a href="https://lupantech.github.io/">Pan Lu</a>,</span>
+            <span class="author-block">
+              <a href="https://vnpeng.net/">Nanyun Peng</a>,</span>
+            <span class="author-block">
+              <a href="http://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of California Los Angeles</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/shirley-wu/vdebugger/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/VDebugger"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Models and Data</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+        <div class="content has-text-centered">
+          <img src="static/images/teaser.jpg" alt="Overview of VDebugger." width="100%"/>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+<!--        <h2 class="title is-3">Introduction</h2>-->
+
+        <div class="content has-text-justified">
+          <p>
+            <i>Visual programs</i> are executable code generated by large language models to address visual reasoning problems. They decompose complex questions into multiple reasoning steps and in005 voke specialized models for each step to solve the problems.
+          </p>
+            <p>However, these programs are prone to logic errors, with our preliminary evaluation showing that 58% of the total errors are caused by program logic errors. Debugging complex visual programs remains a major bot011 tleneck for visual reasoning.
+                </p>
+            <p>To address this, we introduce <b>VDebugger</b>, a novel <i>critic-refiner framework</i> trained to localize and debug visual programs by tracking execution step by step. VDebugger identifies and corrects pro016 gram errors leveraging detailed execution feedback, improving interpretability and accuracy. The training data is generated through an automated pipeline that injects errors into correct visual programs using a novel mask-best decoding technique.
+                </p>
+            <p>Evaluations on six datasets demonstrate VDebugger's effectiveness, showing performance improvements of up to 3.2% in downstream task accuracy. Further studies show VDebugger’s ability to generalize to un026 seen tasks, bringing a notable improvement of 2.3% on the unseen COVR task.</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+        <div class="content has-text-centered">
+          <img src="static/images/comparison.jpg" alt="Comparison against existing work." width="100%"/>
+          <p>Comparison against existing work.</p>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="examples">Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/result_1.jpg" width="95%"/>
+              <p><b>Main results.</b><br/>The two baselines, SelfDebug and LDB, slightly hurt the performance, while our VDebugger consistently improves the performance in every dataset by up to 3.2% accuracy.
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/result_2.jpg" width="80%"/>
+              <p><b>Ablation study.</b><br/>The critic consistently achieves high accuracy, but the refiner success rate is less reliable.
+                The execution feedback consistently brings benefits to critic accuracy and the final performance, but the benefits to refiner performance are minimal.
+               <span style="color:red">This shows that the remaining challenges mainly lie in correcting the program after the errors are identified.</span></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/result_3.jpg" width="50%"/>
+              <p><b>Generalization to unseen LLMs:</b> VDebugger can debug visual programs generated by larger LLMs, including CodeLlama-70b, DeepSeek-Coder-33B and GPT-3.5.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/result_4.jpg" width="40%"/>
+              <p><b>Generalization to unseen tasks:</b> when trained on all six datasets, the generalist VDebugger can generalize to two unseen tasks:
+                (1) RSVG, visual grounding for remote sensing images, and (2) COVR, an unseen task form requiring question answering based on a variable number of images.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="q">Qualitative Analysis</h2>
+        <div id="qq" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/error_breakdown_v.jpg" width="40%"/>
+              <p><b>Sources of errors.</b><br/>Program errors significantly affect the end performance. VDebugger consistently reduces program errors on all datasets, and can can also help recover from foundation VLM errors especially on RefCOCOg.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/case_study.jpg" width="95%"/>
+              <p><b>Example where VDebugger fixes program error.</b></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/case_study2.jpg" width="95%"/>
+              <p><b>Example where VDebugger recovers from foundation model error.</b><br/>The question answering model yields incorrect
+answer "vanity" in the original program. By detecting this error, VDebugger invokes the foundation VLMs in an alternative way
+and thus obtains the correct answer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      TODO
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
