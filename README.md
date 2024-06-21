@@ -35,7 +35,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 cd GLIP
 python setup.py clean --all build develop --user
 ```
-5. If you need to use openai APIs: write api key into `viper/qpi.key`
+5. If you need to use openai APIs: write api key into `viper/api.key`
 
 ## Dataset Setup
 
