@@ -2,9 +2,7 @@
 
 This repo is for **VDebugger: Harnessing Execution Feedback for Debugging Visual Programs**
 
-[Paper](), [Website](https://shirley-wu.github.io/vdebugger/index.html)
-
-The training data and model are uploaded to huggingface: https://huggingface.co/VDebugger
+[Paper](https://arxiv.org/abs/2406.13444), [Website](https://shirley-wu.github.io/vdebugger/index.html), [Models and Data](https://huggingface.co/VDebugger)
 
 ## Outlines
 
@@ -136,3 +134,14 @@ Then you can execute the programs in `critic-refine-infer.csv` as in step 2 of [
 ## Training of VDebugger
 
 If you want to reproduce our training of VDebugger, please use `vdebugger/training_scripts/train_{critic, refiner}.sh`. You will need to install `deepspeed==0.14.0`.
+
+## Citation
+
+Please cite our paper if this repository inspires your work.
+```
+@misc{wu2024vdebugger,
+      title={VDebugger: Harnessing Execution Feedback for Debugging Visual Programs}, 
+      author={Xueqing Wu and Zongyu Lin and Songyan Zhao and Te-Lin Wu and Pan Lu and Nanyun Peng and Kai-Wei Chang},
+      year={2024}
+}
+```
