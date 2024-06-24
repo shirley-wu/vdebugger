@@ -1,4 +1,6 @@
-# VDebugger: Harnessing Execution Feedback for Debugging Visual Programs
+# VDebugger
+
+**VDebugger: Harnessing Execution Feedback for Debugging Visual Programs**
 
 [Paper](https://arxiv.org/abs/2406.13444), [Website](https://shirley-wu.github.io/vdebugger/index.html), [Models and Data](https://huggingface.co/VDebugger)
 
@@ -121,7 +123,7 @@ You can use the same configuration as in step 2. If you want to run multiple `ma
 
 ## Inference of VDebugger
 
-For inference with VDebugger, it is required to first generate and execute visual programs, and obtain a csv file containing `traced` field. Take GQA dataset and VDebugger/VDebugger-{critic, refiner}-generalist-13B as an example:
+For inference with VDebugger, it is required to first generate and execute visual programs, and obtain a csv file containing `traced` field. Then, go to `vdebugger/`. Take GQA dataset and VDebugger/VDebugger-{critic, refiner}-generalist-13B as an example:
 ```bash
 # Step 1: infer critic
 python infer_critic.py VDebugger/VDebugger-critic-generalist-13B --input YOUR_CSV_CONTAINING_TRACED_FIELD --dataset gqa  # output file will be written to critic-infer.csv
