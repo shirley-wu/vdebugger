@@ -7,11 +7,10 @@ import os
 import pandas as pd
 import sklearn.metrics
 import torch
-from dump_data import datasets
 from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
 
-from my_datasets import process_result
+from my_datasets import datasets, process_result
 
 
 def parse(code):

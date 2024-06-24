@@ -1,6 +1,4 @@
-# VDebugger
-
-This repo is for **VDebugger: Harnessing Execution Feedback for Debugging Visual Programs**
+# VDebugger: Harnessing Execution Feedback for Debugging Visual Programs
 
 [Paper](https://arxiv.org/abs/2406.13444), [Website](https://shirley-wu.github.io/vdebugger/index.html), [Models and Data](https://huggingface.co/VDebugger)
 
@@ -10,6 +8,7 @@ This repo is for **VDebugger: Harnessing Execution Feedback for Debugging Visual
 - [Dataset Setup](https://github.com/shirley-wu/vdebugger/tree/main?tab=readme-ov-file#dataset-setup)
 - [Generation and Execution of Visual Programs](https://github.com/shirley-wu/vdebugger/tree/main?tab=readme-ov-file#generation-and-execution-of-visual-programs)
 - [Inference of VDebugger](https://github.com/shirley-wu/vdebugger/tree/main?tab=readme-ov-file#inference-of-vdebugger)
+- [Error Injection](https://github.com/shirley-wu/vdebugger/tree/main?tab=readme-ov-file#error-injection)
 
 ## Environment Setup
 
@@ -134,6 +133,13 @@ Then you can execute the programs in `critic-refine-infer.csv` as in step 2 of [
 ## Training of VDebugger
 
 If you want to reproduce our training of VDebugger, please use `vdebugger/training_scripts/train_{critic, refiner}.sh`. You will need to install `deepspeed==0.14.0`.
+
+## Error Injection
+
+To perform error injection and generate incorrect programs as described in Section 4 of our paper, you first need a `.csv` file containing the visual programs generated for the training set and their execution results. Then, please go to `vdebugger/` and run:
+```bash
+python error_injection.py YOUR_CSV_FILE --error_injection {greedy, mask-best}
+```
 
 ## Citation
 

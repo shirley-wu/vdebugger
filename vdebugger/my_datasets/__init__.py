@@ -33,3 +33,7 @@ def process_result(x):
         except:
             print("Weird or invalid ImagePatch:", x)
     return x
+
+
+datasets = {'gqa': GQADataset(), 'vsr': VSRDataset(), 'tallyqa': TallyQADataset(), 'covr': COVRDataset(),
+            'refcoco': RefCOCODataset(), 'nlvr': NLVRDataset(), }
