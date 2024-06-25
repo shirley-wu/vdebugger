@@ -47,11 +47,8 @@ def main(args):
 
             if '# Program is' in code:
                 code = code.split("# Program is")[0].strip()  # errr, an awkward fix
-            if args.info == 'trace':
-                info = '\n\n-> {}\n\n--- Trace\n\n{}'.format(
-                    critic_outputs['result'][i], critic_outputs['traced'][i])
-            else:
-                info = ''
+            info = '\n\n-> {}\n\n--- Trace\n\n{}'.format(
+                critic_outputs['result'][i], critic_outputs['traced'][i])
             prompt = "# {}\n{}{}".format(q1, code, info)
             tokenized_prompt = [tokenizer.bos_token_id, ] + tokenizer(prompt, add_special_tokens=False).input_ids
             tokenized_inst = tokenizer('\n\n# Correction', add_special_tokens=False).input_ids
