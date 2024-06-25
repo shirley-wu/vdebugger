@@ -20,7 +20,7 @@ def parse(code):
 
 @torch.no_grad()
 def main(args):
-    if os.path.exists(args.model):
+    if os.path.exists(args.refine):
         output_fname = os.path.join(args.refine, args.output_fname)
     assert not os.path.exists(output_fname)
     print("Dump to", output_fname)
