@@ -110,11 +110,13 @@ Go to `viper/` for this step. We recommend first generating and then executing t
 CONFIG_NAMES=generate/gqa python main_batch_generate.py
 ```
 This script will load the configuration under `config/generate/gqa.yaml`. Please remember to change YOUR_DATA_DIR into your data directory. The generated code will be saved in a csv under `code` field
+
 2. Execute and evaluate programs:
 ```bash
 CONFIG_NAMES=execute/gqa python main_batch_execute.py
 ```
 This script will load the configuration under `config/execute/gqa.yaml`. Please also remember to update YOUR_DATA_DIR, and change the `cached_codex_path:` field into the csv produced in step 1. The accuracy / IoU will be computed.
+
 3. If you want to obtain execution feedback:
 ```bash
 CONFIG_NAMES=execute/gqa python main_batch_trace.py A_RANDOM_STAMP
