@@ -1,6 +1,6 @@
 # VDebugger
 
-**VDebugger: Harnessing Execution Feedback for Debugging Visual Programs**
+**VDebugger: Harnessing Execution Feedback for Debugging Visual Programs**, EMNLP Findings 2024
 
 [Paper](https://arxiv.org/abs/2406.13444), [Website](https://shirley-wu.github.io/vdebugger/index.html), [Models and Data](https://huggingface.co/VDebugger)
 
@@ -173,9 +173,25 @@ python error_injection.py YOUR_CSV_FILE --error_injection {greedy, mask-best}
 
 Please cite our paper if this repository inspires your work.
 ```
-@misc{wu2024vdebugger,
-      title={VDebugger: Harnessing Execution Feedback for Debugging Visual Programs}, 
-      author={Xueqing Wu and Zongyu Lin and Songyan Zhao and Te-Lin Wu and Pan Lu and Nanyun Peng and Kai-Wei Chang},
-      year={2024}
+@inproceedings{wu-etal-2024-vdebugger,
+    title = "{VD}ebugger: Harnessing Execution Feedback for Debugging Visual Programs",
+    author = "Wu, Xueqing  and
+      Lin, Zongyu  and
+      Zhao, Songyan  and
+      Wu, Te-Lin  and
+      Lu, Pan  and
+      Peng, Nanyun  and
+      Chang, Kai-Wei",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-emnlp.575",
+    doi = "10.18653/v1/2024.findings-emnlp.575",
+    pages = "9845--9860"
 }
 ```
